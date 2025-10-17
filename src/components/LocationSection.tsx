@@ -76,9 +76,9 @@ const LocationSection = () => {
           <div className="animate-in fade-in slide-in-from-right-4">
             <div className="rounded-lg overflow-hidden shadow-2xl border border-border h-[500px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.234567890123!2d-49.2876543!3d-16.6234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef123456789ab%3A0x1234567890abcdef!2sAv.%20C%C3%A9sar%20Lattes%2C%20400%20-%20Novo%20horizonte%2C%20Goi%C3%A2nia%20-%20GO%2C%2074363-400!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.226305945923!2d-49.322033825030395!3d-16.715556384061532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef6f0d1b1bc9b%3A0xd5276143b69aa07!2sBrazil%20Baterias!5e0!3m2!1spt-BR!2sbr!4v1760668930363!5m2!1spt-BR!2sbr"
                 width="100%"
-                height="100%"
+                height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
