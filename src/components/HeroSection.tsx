@@ -26,7 +26,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <a href="w-full h-auto py-3 text-base sm:text-lg font-semibold bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all whitespace-normal text-center leading-snug">
-              <Button size="lg" className="w-full h-14 text-lg font-semibold bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all">
+              <Button size="lg" className="w-full h-auto py-3 text-base sm:text-lg font-semibold bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all whitespace-normal text-center leading-snug">
                 💬 Fale Conosco via WhatsApp e Receba em Minutos
               </Button>
             </a>
