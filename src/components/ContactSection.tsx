@@ -27,22 +27,51 @@ const ContactSection = () => {
       return;
     }
 
-    // Send email with form data
-    const emailData = {
-      to: "sitebrazilbaterias@gmail.com",
-      subject: `Nova Solicitação de Bateria - ${formData.name}`,
-      name: formData.name,
-      phone: formData.phone,
-      carModel: formData.carModel || "Não informado",
-      neighborhood: formData.neighborhood || "Não informado",
-      message: formData.message || "Nenhuma mensagem adicional",
-    };
 
-    // Send to email (you'll need to implement backend for this)
-    console.log("Email data to send:", emailData);
+    const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    // Redirect to WhatsApp
-    window.open("https://api.whatsapp.com/send?phone=5562993226741&text=Ol%C3%A1%20%F0%9F%91%8B%21%20Vim%20pelo%20site%20da%20Brazil%20Baterias%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20baterias%20dispon%C3%ADveis.%20%E2%9A%A1%20Pode%20me%20ajudar%2C%20por%20favor%3F", "_blank");
+  // Validação
+  if (!formData.name || !formData.phone) {
+    toast({
+      title: "Campos obrigatórios",
+      description: "Por favor, preencha nome e telefone.",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  // Criar a mensagem para WhatsApp
+  const phoneNumber = "5562993226741"; // número completo com DDI (55)
+  const message = `
+*Nova Solicitação de Bateria:*
+
+*Nome:* ${formData.name}
+*Telefone:* ${formData.phone}
+*Modelo:* ${formData.carModel || "Não informado"}
+*Bairro:* ${formData.neighborhood || "Não informado"}
+*Mensagem:* ${formData.message || "Nenhuma mensagem adicional"}
+`;
+
+  // Redirecionar para WhatsApp
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappURL, "_blank");
+
+  toast({
+    title: "Solicitação enviada!",
+    description: "Redirecionando para o WhatsApp...",
+  });
+
+  // Resetar o formulário
+  setFormData({
+    name: "",
+    phone: "",
+    carModel: "",
+    neighborhood: "",
+    message: "",
+  });
+};
+
 
     toast({
       title: "Solicitação enviada!",

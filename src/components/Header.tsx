@@ -26,8 +26,8 @@ const Header = () => {
 
   return (
     <header
-      className={`relative w-full transition-all duration-300 ${
-        isScrolled ? "bg-[#284835]/95 backdrop-blur-md shadow-md text-white" : "bg-background/80 backdrop-blur-sm"
+      className={`fixed top-0 left-0 right-0 z-50 relative w-full transition-all duration-300 ${
+        isScrolled ? "bg-[#284835]/80 backdrop-blur-md shadow-md text-white" : "bg-[#284835] text-white" // no topo: verde sólido
       }`}
     >
       <div className="container mx-auto px-4">
@@ -103,7 +103,7 @@ const Header = () => {
                   </Button>
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=5562993226741&text=Ol%C3%A1%20%F0%9F%91%8B%21%20Vim%20pelo%20site%20da%20Brazil%20Baterias%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20baterias%20dispon%C3%ADveis.%20%E2%9A%A1%20Pode%20me%20ajudar%2C%20por%20favor%3F" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full gap-2 bg-primary hover:bg-primary/90">
+                  <Button className="w-full h-auto py-3 text-base sm:text-lg font-semibold bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all whitespace-normal text-center leading-snug">
                     💬 Fale pelo WhatsApp
                   </Button>
                 </a>
