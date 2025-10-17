@@ -38,19 +38,19 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection("inicio")} className="text-foreground hover:text-primary transition-colors font-medium">
+            <button onClick={() => scrollToSection("inicio")} className="text-white hover:text-primary transition-colors font-medium">
               Início
             </button>
-            <button onClick={() => scrollToSection("servicos")} className="text-foreground hover:text-primary transition-colors font-medium">
+            <button onClick={() => scrollToSection("servicos")} className="text-white hover:text-primary transition-colors font-medium">
               Serviços
             </button>
-            <button onClick={() => scrollToSection("marcas")} className="text-foreground hover:text-primary transition-colors font-medium">
+            <button onClick={() => scrollToSection("marcas")} className="text-white hover:text-primary transition-colors font-medium">
               Marcas
             </button>
-            <button onClick={() => scrollToSection("contato")} className="text-foreground hover:text-primary transition-colors font-medium">
+            <button onClick={() => scrollToSection("contato")} className="text-white hover:text-primary transition-colors font-medium">
               Contato
             </button>
-            <button onClick={() => scrollToSection("localizacao")} className="text-foreground hover:text-primary transition-colors font-medium">
+            <button onClick={() => scrollToSection("localizacao")} className="text-white hover:text-primary transition-colors font-medium">
               Localização
             </button>
           </nav>
@@ -97,7 +97,7 @@ const Header = () => {
               </button>
               <div className="flex flex-col gap-2 pt-4 border-t">
                 <a href={`tel:${phoneNumber}`}>
-                  <Button variant="outline" className="w-full gap-2">
+                  <Button variant="outline" className="w-full gap-2 text-black border-black hover:bg-gray-100">
                     <Phone className="h-4 w-4" />
                     (62) 99322-6741
                   </Button>

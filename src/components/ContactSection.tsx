@@ -14,21 +14,7 @@ const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Validation
-    if (!formData.name || !formData.phone) {
-      toast({
-        title: "Campos obrigatórios",
-        description: "Por favor, preencha nome e telefone.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-
-    const handleSubmit = (e: React.FormEvent) => {
+ const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault();
 
   // Validação
@@ -41,26 +27,29 @@ const ContactSection = () => {
     return;
   }
 
-  // Criar a mensagem para WhatsApp
-  const phoneNumber = "5562993226741"; // número completo com DDI (55)
-  const message = `
-*Nova Solicitação de Bateria:*
+  // Número da loja com DDI (55 = Brasil)
+  const phoneNumber = "5562993226741";
+
+  // Monta a mensagem personalizada
+  const message = `Olá! 👋 Vim pelo site da *Brazil Baterias* e gostaria de solicitar atendimento.
 
 *Nome:* ${formData.name}
 *Telefone:* ${formData.phone}
 *Modelo:* ${formData.carModel || "Não informado"}
 *Bairro:* ${formData.neighborhood || "Não informado"}
-*Mensagem:* ${formData.message || "Nenhuma mensagem adicional"}
-`;
+*Mensagem:* ${formData.message || "Nenhuma mensagem adicional"}`;
 
-  // Redirecionar para WhatsApp
+  // Cria o link do WhatsApp com o texto codificado
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  window.open(whatsappURL, "_blank");
 
+  // Exibe toast de confirmação
   toast({
     title: "Solicitação enviada!",
     description: "Redirecionando para o WhatsApp...",
   });
+
+  // Abre o WhatsApp com a conversa preenchida
+  window.open(whatsappURL, "_blank");
 
   // Resetar o formulário
   setFormData({
@@ -73,20 +62,7 @@ const ContactSection = () => {
 };
 
 
-    toast({
-      title: "Solicitação enviada!",
-      description: "Redirecionando para o WhatsApp...",
-    });
 
-    // Reset form
-    setFormData({
-      name: "",
-      phone: "",
-      carModel: "",
-      neighborhood: "",
-      message: "",
-    });
-  };
 
   return (
     <section id="contato" className="py-20 bg-background">

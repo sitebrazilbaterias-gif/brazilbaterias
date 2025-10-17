@@ -65,7 +65,7 @@ const MouraPartnershipSection = () => {
               Somos revendedor oficial de Baterias Moura, garantindo produtos originais, garantia de fábrica e o melhor suporte técnico para o seu veículo.
             </p>
             <a href={`https://wa.me/${whatsappNumber}?text=Olá! Gostaria de saber mais sobre as Baterias Moura.`} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="secondary" className="gap-2 text-lg px-8 h-14">
+              <Button size="lg" variant="secondary" className="gap-2 text-lg px-8 h-14 w-full sm:w-auto">
                 💬 Consulte Baterias Moura Agora
               </Button>
             </a>
