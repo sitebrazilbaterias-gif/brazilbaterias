@@ -27,13 +27,13 @@ const Header = () => {
   return (
     <header
       className={`ffixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#284835]/95 backdrop-blur-md shadow-md text-white" : "bg-[#284835]/70 backdrop-blur-sm text-white"
+        isScrolled ? "bg-[#284835]/95 backdrop-blur-md shadow-md text-white" : "bg-background/80 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("inicio")}>
-            <img src={logo} alt="Brazil Baterias" className="h-12 w-auto" />
+            <img src={logo} alt="Brazil Baterias" className="h-16 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
@@ -58,7 +58,7 @@ const Header = () => {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
             <a href={`tel:${phoneNumber}`}>
-              <Button variant="outline" size="sm" className="gap-2">
+              <Button variant="outline" size="sm" className="gap-2 text-black border-black hover:bg-gray-100">
                 <Phone className="h-4 w-4" />
                 (62) 99322-6741
               </Button>

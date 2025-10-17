@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-brasil-baterias.jpg";
 
 const Footer = () => {
   const whatsappNumber = "5562993226741";
@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           <div>
-            <img src={logo} alt="Brazil Baterias" className="h-16 w-auto mb-4 brightness-0 invert" />
+            <img src={logo} alt="Brazil Baterias" className="h-24 w-auto mb-4 " />
             <p className="text-primary-foreground/80 mb-4">
               Energia e confiança para o seu carro, sempre que você precisar.
             </p>
