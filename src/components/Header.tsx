@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo-brasil-baterias.jpg";
+// Adicione estas duas linhas para importar os SVGs
+import whatsappIcon from "@/assets/whatsapp svg.svg"; 
+import instagramIcon from "@/assets/insta svg.svg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,7 +68,7 @@ const Header = () => {
             </a>
             <a href="https://api.whatsapp.com/send?phone=5562993226741&text=Ol%C3%A1%20%F0%9F%91%8B%21%20Vim%20pelo%20site%20da%20Brazil%20Baterias%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20baterias%20dispon%C3%ADveis.%20%E2%9A%A1%20Pode%20me%20ajudar%2C%20por%20favor%3F" target="_blank" rel="noopener noreferrer">
               <Button className="gap-2 bg-primary hover:bg-primary/90">
-                💬 WhatsApp
+                <img src={whatsappIcon} alt="WhatsApp" className="h-5 w-5 mr-2" /> WhatsApp
               </Button>
             </a>
           </div>
@@ -104,7 +107,7 @@ const Header = () => {
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=5562993226741&text=Ol%C3%A1%20%F0%9F%91%8B%21%20Vim%20pelo%20site%20da%20Brazil%20Baterias%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20baterias%20dispon%C3%ADveis.%20%E2%9A%A1%20Pode%20me%20ajudar%2C%20por%20favor%3F" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full h-auto py-3 text-base sm:text-lg font-semibold bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all whitespace-normal text-center leading-snug">
-                    💬 Fale pelo WhatsApp
+                    <img src={whatsappIcon} alt="WhatsApp" className="h-5 w-5 mr-2" /> Fale pelo WhatsApp
                   </Button>
                 </a>
               </div>

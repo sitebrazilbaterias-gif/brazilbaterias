@@ -1,5 +1,5 @@
 import { Zap, Award, Clock, CreditCard, Wrench, MapPin } from "lucide-react";
-import technicianImage from "@/assets/tecnico-instalacao.webp";
+import technicianImage from "src/assets/Designer Brasil baterias.svg";
 
 const BenefitsSection = () => {
   const benefits = [

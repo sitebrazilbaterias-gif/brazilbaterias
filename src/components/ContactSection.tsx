@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import whatsappIcon from "@/assets/whatsapp svg.svg"; 
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -146,7 +147,7 @@ const ContactSection = () => {
                 </div>
 
                 <Button type="submit" size="lg" className="w-full h-14 text-lg font-semibold">
-                  💬 Solicitar atendimento imediato
+                  <img src={whatsappIcon} alt="WhatsApp" className="h-5 w-5" /> Solicitar atendimento imediato
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground">
@@ -166,7 +167,7 @@ const ContactSection = () => {
               </a>
               <a href="https://api.whatsapp.com/send?phone=5562993226741&text=Ol%C3%A1%20%F0%9F%91%8B%21%20Vim%20pelo%20site%20da%20Brazil%20Baterias%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20baterias%20dispon%C3%ADveis.%20%E2%9A%A1%20Pode%20me%20ajudar%2C%20por%20favor%3F" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90">
-                  💬 WhatsApp Direto
+                  <img src={whatsappIcon} alt="WhatsApp" className="h-5 w-5" /> WhatsApp Direto
                 </Button>
               </a>
             </div>
